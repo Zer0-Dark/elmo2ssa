@@ -1,4 +1,4 @@
-
+import logo from "../assets/8.png"
 
 function Nav() {
     return (
@@ -9,7 +9,7 @@ function Nav() {
 
             <div className="flex space-x-5 items-center  cursor-pointer " >
                 <h1>مؤسسة محمود فهمي درويش</h1>
-                <img src="/src/assets/8.png" alt="logo" className="w-14" />
+                <img src={logo} alt="logo" className="w-14" />
             </div>
 
         </div>

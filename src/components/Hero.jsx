@@ -1,9 +1,9 @@
-
+import heroPhoto from "../assets/dddd.jpg"
 
 function Hero() {
     return (
         <div>
-            <img src="/src/assets/dddd.jpg" className="w-full max-h-screen">
+            <img src={heroPhoto} className="w-full max-h-screen">
             </img>
         </div>
     )
