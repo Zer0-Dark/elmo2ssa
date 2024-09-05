@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         "mainFont": [" Lalezar, system-ui"],
         "secondryFont": ["Noto Sans Arabic, sans-serif"]
+      },
+      screens: {
+        'desktop': '880px'
       }
     },
   },

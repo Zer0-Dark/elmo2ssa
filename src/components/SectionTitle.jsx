@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 
 
-function SectionTitle({ title, left }) {
-    console.log(left);
+function SectionTitle({ title }) {
     return (
         <div className=" relative">
             <div
-                style={{ left: `-${left}%` }}
-                className={`absolute   top-[25%] w-96 h-8 bg-secondryBg`} ></div>
-            <h1 className="text-6xl font-mainFont z-20 relative ">{title}</h1>
+
+                className={`absolute desktop:-left-1/2 -left-2/4 top-[27%]    dekstop:top-[25%] desktop:w-96 w-56 desktop:h-8 h-4 bg-secondryBg`} ></div>
+            <h1 className="desktop:text-6xl text-4xl font-mainFont z-20 relative text-center ">{title}</h1>
         </div>
     )
 }
