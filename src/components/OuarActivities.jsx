@@ -22,15 +22,16 @@ function OuarActivities() {
     const containerRef = useRef();
     function inc() {
         console.log(windowWidthSize);
-        containerRef.current.scrollLeft += windowWidthSize - 24;
+        containerRef.current.scrollLeft += (windowWidthSize - (windowWidthSize * 60 / 100));
     }
     function dec() {
         console.log(windowWidthSize);
-        containerRef.current.scrollLeft -= windowWidthSize - 24;
+        containerRef.current.scrollLeft -= (windowWidthSize - (windowWidthSize * 60 / 100));
 
     }
+    console.log("this is a test");
     return (
-        <div className="py-14 flex justify-center flex-col items-center relative">
+        <div id="activity" className="py-14 flex justify-center flex-col items-center relative">
             <SectionTitle title="نشاطاتنا" />
             <div className="w-[100%] overflow-hidden relative">
                 <div
@@ -44,6 +45,7 @@ function OuarActivities() {
 
 
                 </div>
+
                 <motion.div
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 0.4 }}

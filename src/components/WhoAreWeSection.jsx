@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle"
 
 function WhoAreWeSection() {
     return (
-        <div className="py-14 flex justify-center flex-col items-center">
+        <div id="whoAreWe" className="py-14 flex justify-center flex-col items-center">
             <SectionTitle title="من نحن ؟" />
             <div className="mt-6 desktop:max-w-[780px] max-w-[80%] text-center desktop:text-xl text-sm font-sans">
                 <p className=" font-secondryFont leading-relaxed font-semibold" dir="rtl" lang="ar">تأسست مؤسسة محمود فهمي درويش مؤسسة خيريه غير ربحية تأسست بتاريخ 17 اغسطس 2020 مشهرة برقم 4146 بالاسكندرية .
