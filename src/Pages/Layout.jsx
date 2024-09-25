@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
+
 import { Outlet } from "react-router-dom"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
-function Layout() {
+function Layout(props) {
     return (
         <div>
-            <Nav />
+            <Nav login={props.login} />
             <Outlet />
             <Footer />
         </div>
