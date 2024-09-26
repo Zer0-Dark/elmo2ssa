@@ -21,7 +21,7 @@ function WhoAreWeSection() {
         }
 
         getParaList();
-    }, [paraCollectionRef])
+    }, [])
 
     return (
         <div id="whoAreWe" className="py-14 flex justify-center flex-col items-center">
