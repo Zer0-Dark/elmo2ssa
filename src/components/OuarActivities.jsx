@@ -4,8 +4,33 @@ import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Activity from "./Activity";
+import { db } from '../firebase-config.js'
+import { getDocs, collection, updateDoc, doc } from "firebase/firestore";
+
 function OuarActivities() {
     const [windowWidthSize, setWindowWidthSize] = useState(0);
+
+    const [activity, setActivity] = useState([]);
+
+
+    const activitysCollectionRef = collection(db, "Activitys");
+
+    useEffect(() => {
+        const getActivityList = async () => {
+            try {
+                const data = await getDocs(activitysCollectionRef);
+                const filterdData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+                setActivity(filterdData);
+                console.log(filterdData);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        getActivityList();
+    }, [])
+
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,9 +63,12 @@ function OuarActivities() {
                     ref={containerRef}
                     className={`flex sticky  top-0 left-0 items-center px-6  transition overflow-x-hidden scroll-smooth gap-5  mt-10 w-[100%] h-[100%] `}>
 
-                    <Activity />
-                    <Activity />
-                    <Activity />
+
+                    {
+
+                        activity.map((act, index) => <Activity key={act.id} title={act.title} description={act.desc} photo={act.photoUrl} num={index + 1} />)
+
+                    }
 
 
 

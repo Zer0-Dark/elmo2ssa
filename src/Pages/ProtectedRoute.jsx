@@ -5,8 +5,6 @@ import { Navigate } from "react-router-dom";
 
 
 const ProtectedRoute = (props) => {
-    // Custom hook or context to get auth state
-    console.log(props.login);
     if (!props.login) {
         // If user is not authenticated, redirect to the login page
         return <Navigate to="/login" replace />;

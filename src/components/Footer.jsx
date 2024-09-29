@@ -1,6 +1,32 @@
 import logo from "../assets/8.png"
+import { useState, useEffect } from "react";
+import { db } from '../firebase-config.js'
+import { getDocs, collection, } from "firebase/firestore";
+
 
 function Footer() {
+    const [contactInfo, setContactInfo] = useState([])
+    const contactCollectionRef = collection(db, "contact");
+
+
+    const getContactList = async () => {
+        try {
+            const data = await getDocs(contactCollectionRef);
+            const filterdData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+            setContactInfo(filterdData);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+    useEffect(() => {
+
+
+        getContactList();
+    }, []);
+
+
     return (
         <div id="contact" className=" bg-mainTheme">
 
@@ -12,10 +38,10 @@ function Footer() {
 
                 <div className="desktop:w-1/3 desktop:max-w-1/3 w-1/3 text-white font-secondryFont space-y-1 desktop:space-y-5 desktop:text-base text-xs">
                     <h1 dir="rtl" lang="ar" className="font-mainFont text-sm desktop:text-xl ">عناوين التواصل</h1>
-                    <h2 dir="rtl" lang="ar" >العنوان : 12 شارع محمد علي , مصطفي كامل , الاسكندرية</h2>
-                    <h2 dir="rtl" lang="ar">البريد الالكتروني : test@gmai.com</h2>
-                    <h2 dir="rtl" lang="ar">رقم الهاتف :  0171231231231</h2>
-                    <h2 dir="rtl" lang="ar"> رقم حساب التبرعات (بنك مصر) : 1231231232451123</h2>
+                    <h2 dir="rtl" lang="ar" >العنوان : {contactInfo[0]?.address}</h2>
+                    <h2 dir="rtl" lang="ar">البريد الالكتروني : {contactInfo[0]?.email}</h2>
+                    <h2 dir="rtl" lang="ar">رقم الهاتف :  {contactInfo[0]?.phone}</h2>
+                    <h2 dir="rtl" lang="ar"> رقم حساب التبرعات (بنك مصر) : {contactInfo[0]?.bank}</h2>
                 </div>
 
 
