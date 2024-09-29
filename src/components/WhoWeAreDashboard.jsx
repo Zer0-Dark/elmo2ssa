@@ -42,7 +42,7 @@ function WhoWeAreDashboard() {
             <button onClick={() => { updateWhoAreWeParagaph(para.id) }} className="desktop:w-1/5  bg-secondryBg font-mainFont text-2xl p-4 mt-6 cursor-pointer hover:bg-white border-2 border-mainTheme rounded-lg">تغيير</button>
 
 
-          
+
         </>
     )
 }

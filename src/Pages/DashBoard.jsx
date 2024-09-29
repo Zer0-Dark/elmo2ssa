@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 
 import FooterDashboard from "../components/FooterDashboard.jsx";
-import WhoWeAreDashboard from "../components/whoWeAreDashboard.jsx";
+import WhoWeAreDashboard from "../components/WhoWeAreDashboard.jsx";
 import ActivitysDashboard from "../components/ActivitysDashboard.jsx";
 
 function DashBoard(props) {
