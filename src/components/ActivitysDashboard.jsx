@@ -66,7 +66,7 @@ function ActivitysDashboard() {
                     <SectionTitle title={"النشاطات"}></SectionTitle>
 
                 </div>
-                <div className="flex w-[90%] p-10 gap-7 flex-wrap justify-center bg-secondryBg rounded-sm">
+                <div className="flex w-[90%] desktop:p-10 p-4 gap-7 flex-wrap justify-center bg-secondryBg rounded-sm">
                     {
                         activity.map((act, index) => <ActivityDashboard del={() => { deleteActivity(act.id) }} key={act.id} title={act.title} description={act.desc} photo={act.photoUrl} num={index + 1} />)
                     }
@@ -77,7 +77,7 @@ function ActivitysDashboard() {
 
             </div>
             <div className="w-full flex flex-col justify-center items-center mb-12">
-                <div className="bg-secondryBg p-4 space-y-2 flex flex-col justify-center items-center w-[45%] rounded-md ">
+                <div className="bg-secondryBg p-4 space-y-2 flex flex-col justify-center items-center desktop:w-[45%] w-[80%] rounded-md ">
                     <h3 className="text-2xl " dir="rtl" lang="ar">العنوان</h3>
                     <input value={newActivity.title} onChange={(e) => { setNewActivity({ ...newActivity, title: e.target.value }) }} lang="ar" dir="rtl" type="text" className="px-2 py-2 w-full rounded-sm"></input>
                     <h3 className="text-2xl" dir="rtl" lang="ar">لينك الصوره</h3>

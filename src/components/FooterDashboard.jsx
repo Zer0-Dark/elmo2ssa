@@ -44,7 +44,7 @@ function FooterDashboard() {
     return (
         <div className="w-full flex flex-col justify-center items-center mb-12">
             <SectionTitle title="تواصل معنا"></SectionTitle>
-            <div className="bg-secondryBg p-10 w-[45%] flex flex-col justify-end items-center space-y-4 mb-6 mt-10 ">
+            <div className="bg-secondryBg desktop:p-8 p-4 desktop:w-[45%] w-[90%] flex flex-col justify-end items-center space-y-4 mb-6 mt-10 ">
                 <h3 className="text-2xl ">العنوان</h3>
                 <textarea value={contactInfo.address} onChange={(e) => setContactInfo({ ...contactInfo, address: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 text-xl w-full"></textarea>
                 <h3 className="text-2xl ">البريد الالكتروني</h3>
@@ -54,7 +54,7 @@ function FooterDashboard() {
                 <h3 className="text-2xl">رقم حساب التبرعات</h3>
                 <input value={contactInfo.bank} onChange={(e) => setContactInfo({ ...contactInfo, bank: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 text-xl w-full"></input>
             </div>
-            <button onClick={() => updateContactInfo(contactInfo.id)} className="bg-secondryBg text-2xl border-2 border-mainTheme px-8 py-2 rounded-md">تغيير</button>
+            <button onClick={() => updateContactInfo(contactInfo.id)} className="bg-secondryBg text-2xl border-2 border-mainTheme px-8 py-2 rounded-md desktop:w-fit w-1/2">تغيير</button>
         </div>
     )
 }

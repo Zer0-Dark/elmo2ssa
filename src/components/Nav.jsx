@@ -23,7 +23,7 @@ function Nav(props) {
     }
 
     return (
-        <div className="bg-mainTheme w-full flex justify-between text-white desktop:text-2xl text-sm py-3 desktop:px-12 px-5 items-center font-mainFont relative">
+        <div className="bg-mainTheme w-full flex justify-between text-white desktop:text-2xl  py-3 desktop:px-12 px-5 items-center font-mainFont relative">
             {
                 !props.login &&
                 <div className=" cursor-pointer hover:text-secondryColor">
