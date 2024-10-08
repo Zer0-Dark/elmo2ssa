@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Activity from "./Activity";
 import { db } from '../firebase-config.js'
-import { getDocs, collection, updateDoc, doc } from "firebase/firestore";
+import { getDocs, collection } from "firebase/firestore";
 
 function OuarActivities() {
     const [windowWidthSize, setWindowWidthSize] = useState(0);
 
     const [activity, setActivity] = useState([]);
+
+    const containerRef = useRef();
 
 
     const activitysCollectionRef = collection(db, "Activitys");
@@ -21,7 +23,7 @@ function OuarActivities() {
                 const data = await getDocs(activitysCollectionRef);
                 const filterdData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
                 setActivity(filterdData);
-                console.log(filterdData);
+
             } catch (error) {
                 console.log(error);
             }
@@ -35,26 +37,41 @@ function OuarActivities() {
     useEffect(() => {
         const handleResize = () => {
             setWindowWidthSize(window.innerWidth);
+
+
         }
 
+
         window.addEventListener('resize', handleResize);
+
 
         handleResize();
 
         return () => window.removeEventListener('resize', handleResize);
     }, [])
 
-    const containerRef = useRef();
+
     function inc() {
-        console.log(windowWidthSize);
+
         containerRef.current.scrollLeft += (windowWidthSize - (windowWidthSize * 60 / 100));
     }
     function dec() {
-        console.log(windowWidthSize);
+
         containerRef.current.scrollLeft -= (windowWidthSize - (windowWidthSize * 60 / 100));
 
     }
-    console.log("this is a test");
+    useEffect(() => {
+        scrollMiddle();
+    })
+    function scrollMiddle() {
+        let a = containerRef.current.scrollWidth / 3.5;
+
+        containerRef.current.scrollLeft += (a);
+
+    }
+
+
+
     return (
         <div id="activity" className="py-14 flex justify-center flex-col items-center relative">
             <SectionTitle title="نشاطاتنا" />

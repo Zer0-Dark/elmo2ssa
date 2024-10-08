@@ -4,6 +4,7 @@ import { getDocs, collection, doc, addDoc, deleteDoc } from "firebase/firestore"
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import ActivityDashboard from "../components/ActivityDashboard.jsx";
+import SectionTitle from './SectionTitle.jsx';
 
 function ActivitysDashboard() {
 
@@ -59,9 +60,12 @@ function ActivitysDashboard() {
 
 
     return (
-        <div className="w-full">
+        <div className="w-full mt-12">
             <div className="w-full flex flex-col justify-center items-center mb-12">
-                <h2 className="text-5xl py-7 bg-se ">النشاطات</h2>
+                <div className='mb-7'>
+                    <SectionTitle title={"النشاطات"}></SectionTitle>
+
+                </div>
                 <div className="flex w-[90%] p-10 gap-7 flex-wrap justify-center bg-secondryBg rounded-sm">
                     {
                         activity.map((act, index) => <ActivityDashboard del={() => { deleteActivity(act.id) }} key={act.id} title={act.title} description={act.desc} photo={act.photoUrl} num={index + 1} />)

@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout login={login} />}>
+        <Route element={<Layout logout={logout} login={login} />}>
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<LogIn onLogin={onLogin} login={login} />}></Route>
 

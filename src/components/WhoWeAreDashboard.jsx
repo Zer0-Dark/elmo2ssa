@@ -3,6 +3,7 @@ import { getDocs, collection, updateDoc, doc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from '../firebase-config.js'
 import { toast } from "react-hot-toast";
+import SectionTitle from "./SectionTitle.jsx";
 
 function WhoWeAreDashboard() {
 
@@ -37,13 +38,13 @@ function WhoWeAreDashboard() {
     }, [])
     return (
         <>
-            <h2 className="text-5xl py-7 ">فقرة من نحن</h2>
-            <textarea onChange={(e) => { setUpdatedPara(e.target.value) }} value={updatedPara} type="text" className=" w-2/3 p-6 min-h-48  text-2xl " dir="rtl" lang="ar"></textarea>
+            <SectionTitle title={"فقرة من نحن"} ></SectionTitle>
+            <textarea onChange={(e) => { setUpdatedPara(e.target.value) }} value={updatedPara} type="text" className=" w-2/3 p-6 min-h-48 mt-7  text-2xl " dir="rtl" lang="ar"></textarea>
             <button onClick={() => { updateWhoAreWeParagaph(para.id) }} className="desktop:w-1/5  bg-secondryBg font-mainFont text-2xl p-4 mt-6 cursor-pointer hover:bg-white border-2 border-mainTheme rounded-lg">تغيير</button>
 
 
-
         </>
+
     )
 }
 

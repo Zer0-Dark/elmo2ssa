@@ -7,7 +7,7 @@ import Footer from "../components/Footer"
 function Layout(props) {
     return (
         <div>
-            <Nav login={props.login} />
+            <Nav login={props.login} logout={props.logout} />
             <Outlet />
             <Footer />
         </div>

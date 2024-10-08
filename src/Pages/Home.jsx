@@ -3,17 +3,20 @@ import Hero from "../components/Hero"
 import WhoAreWeSection from "../components/WhoAreWeSection"
 import PplSection from "../components/PplSection"
 import OuarActivities from "../components/OuarActivities"
+import { useState } from "react"
 
 
 function Home() {
+
     return (
         <div className="main-container bg-mainBg min-h-screen min-w-screen">
             {/* <Nav /> */}
-            <Hero />
+            < Hero />
             <WhoAreWeSection />
             <PplSection />
             <OuarActivities />
             {/* <Footer /> */}
+
         </div>
     )
 }

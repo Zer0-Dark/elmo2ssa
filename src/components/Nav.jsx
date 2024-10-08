@@ -1,34 +1,53 @@
 /* eslint-disable react/prop-types */
-
+import { signOut } from "firebase/auth"
+import { auth } from "../firebase-config";
 import { NavLink, useLocation } from "react-router-dom"
 import logo from "../assets/8.png"
 import { HashLink } from 'react-router-hash-link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Nav(props) {
     const location = useLocation();
+    const [showNav, setShowNav] = useState(false);
+    const navigate = useNavigate();
+
+
+    async function loguout() {
+        setShowNav(false);
+        await signOut(auth);
+        props.logout();
+        navigate("/login");
+    }
 
     return (
-        <div className="bg-mainTheme w-full flex justify-between text-white desktop:text-2xl text-sm py-3 desktop:px-12 px-5 items-center font-mainFont">
+        <div className="bg-mainTheme w-full flex justify-between text-white desktop:text-2xl text-sm py-3 desktop:px-12 px-5 items-center font-mainFont relative">
             {
                 !props.login &&
                 <div className=" cursor-pointer hover:text-secondryColor">
-                    <NavLink to={"/login"}>تسجيل الدخول</NavLink>
+                    <NavLink to={"/login"}><FontAwesomeIcon className="text-3xl" icon={faUserCircle} /></NavLink>
                 </div>
             }
 
             {
-                (props.login && location.pathname !== "/dashboard") &&
+                (props.login) &&
                 <div className=" cursor-pointer hover:text-secondryColor">
-                    <NavLink to={"/dashboard"}>لوحة المعلومات</NavLink>
+                    <button onClick={() => setShowNav((prev) => !prev)}> <FontAwesomeIcon className="text-3xl" icon={faUserCircle} /></button>
+                </div>
+            }
+            {
+                showNav &&
+                <div className=" absolute bottom-0 translate-y-full bg-secondryColor p-1 flex flex-col gap-1  ">
+                    <NavLink onClick={() => setShowNav(false)} to={"/dashboard"} className="px-8 py-6 inline-block hover:bg-secondryBg hover:text-black cursor-pointer bg-mainTheme">لوحه المعلومات</NavLink>
+                    <button onClick={loguout} className="px-8 py-6 inline-block hover:bg-secondryBg hover:text-black cursor-pointer bg-mainTheme">تسجيل الخروج</button>
+
+
                 </div>
             }
 
-            {
-                (props.login && location.pathname === "/dashboard") &&
-                <div className=" cursor-pointer hover:text-secondryColor">
-                    <NavLink to={"/"}>الصفحة الرئيسية</NavLink>
-                </div>
-            }
+
 
 
             {/* {
@@ -54,7 +73,7 @@ function Nav(props) {
                 <img src={logo} alt="logo" className="desktop:w-14 w-8" />
             </NavLink>
 
-        </div>
+        </div >
     )
 }
 
