@@ -16,11 +16,11 @@ function Activity(props) {
 
         // </div>
 
-        <motion.div className="min-w-[50%] overflow-hidden group border-4 rounded-lg border-mainTheme relative  ">
+        <motion.div className="desktop:min-w-[50%] min-w-[100%] overflow-hidden group border-4 rounded-lg border-mainTheme relative  ">
             <motion.img transition={{ type: "tween" }} initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} src={props.photo} className=" w-full max-h-[90vh] " alt="active"></motion.img>
-            <div className=" w-full absolute bottom-12 left-0 text-white text-4xl text-center h-[30%] ">
-                <h1 className=" group-hover:bg-secondryBg group-hover:text-mainTheme  p-4 duration-500 transition-all font-bold ">{props.title}</h1>
-                <h1 className=" text-xl font-secondryFont  duration-100 transition-all px-4 py-2 ">{props.description}</h1>
+            <div className=" w-full absolute bottom-12 left-0 text-white desktop:text-4xl text-2xl text-center h-[30%] ">
+                <h1 className=" group-hover:bg-secondryBg group-hover:text-mainTheme  desktop:p-4 p-2 duration-500 transition-all font-bold ">{props.title}</h1>
+                <h1 className=" desktop:text-xl text-sm font-secondryFont  duration-100 transition-all px-4 desktop:py-2 ">{props.description}</h1>
 
             </div>
 
