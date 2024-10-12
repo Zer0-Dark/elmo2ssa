@@ -18,9 +18,9 @@ function Activity(props) {
 
         <motion.div className="min-w-[50%] overflow-hidden group border-4 rounded-lg border-mainTheme relative  ">
             <motion.img transition={{ type: "tween" }} initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} src={props.photo} className=" w-full max-h-[90vh] " alt="active"></motion.img>
-            <div className=" w-full absolute bottom-[8px] left-0 text-white text-4xl text-center h-[30%] ">
+            <div className=" w-full absolute bottom-12 left-0 text-white text-4xl text-center h-[30%] ">
                 <h1 className=" group-hover:bg-secondryBg group-hover:text-mainTheme  p-4 duration-500 transition-all font-bold ">{props.title}</h1>
-                <h1 className=" text-2xl  duration-100 transition-all px-4 py-2 ">{props.description}</h1>
+                <h1 className=" text-xl font-secondryFont  duration-100 transition-all px-4 py-2 ">{props.description}</h1>
 
             </div>
 

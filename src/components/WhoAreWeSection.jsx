@@ -40,7 +40,7 @@ function WhoAreWeSection() {
             <div id="whoAreWe" className="py-14 flex justify-center flex-col items-center" >
                 <SectionTitle title="من نحن ؟" />
                 <div className="mt-6 desktop:max-w-[780px] max-w-[80%] text-center desktop:text-xl text-sm font-sans">
-                    <p className=" font-secondryFont leading-relaxed font-semibold" dir="rtl" lang="ar">
+                    <p className=" leading-relaxed font-semibold font-secondryFont" dir="rtl" lang="ar">
                         {para[0]?.paragraph}
                     </p>
                 </div>
