@@ -52,21 +52,31 @@ function OuarActivities() {
 
 
     function inc() {
+        let gap = windowWidthSize > 880 ? 20 : 25
 
-        containerRef.current.scrollLeft += (windowWidthSize - (windowWidthSize * 60 / 100));
+
+        if (containerRef.current.scrollLeft > (containerRef.current.scrollWidth - windowWidthSize - gap)) {
+            containerRef.current.scrollLeft = 0;
+            console.log("here")
+        } else {
+
+            containerRef.current.scrollLeft += (windowWidthSize - gap);
+        }
+
     }
     function dec() {
+        let gap = windowWidthSize > 880 ? 20 : 25
 
-        containerRef.current.scrollLeft -= (windowWidthSize - (windowWidthSize * 60 / 100));
+        containerRef.current.scrollLeft -= (windowWidthSize - gap);
 
     }
     useEffect(() => {
         scrollMiddle();
     })
     function scrollMiddle() {
-        let a = containerRef.current.scrollWidth / 3.5;
+        let gap = windowWidthSize > 880 ? 20 : 25
 
-        containerRef.current.scrollLeft += (a);
+        containerRef.current.scrollLeft += ((windowWidthSize * 2) - (gap * 2));
 
     }
 

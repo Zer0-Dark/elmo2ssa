@@ -17,7 +17,8 @@ export default {
         "secondryFont": ["Noto Sans Arabic, sans-serif"]
       },
       screens: {
-        'desktop': '880px'
+        'desktop': '880px',
+        'bigDesktop': '1200px'
       }
     },
   },

@@ -39,8 +39,8 @@ function WhoAreWeSection() {
             </AnimatePresence>
             <div id="whoAreWe" className="py-14 flex justify-center flex-col items-center" >
                 <SectionTitle title="من نحن ؟" />
-                <div className="mt-6 desktop:max-w-[780px] max-w-[80%] text-center desktop:text-xl text-sm font-sans">
-                    <p className=" leading-relaxed font-semibold font-secondryFont" dir="rtl" lang="ar">
+                <div className="mt-6 desktop:max-w-[780px] max-w-[80%] text-center desktop:text-xl text-xs font-sans">
+                    <p className="  font-semibold font-secondryFont" dir="rtl" lang="ar">
                         {para[0]?.paragraph}
                     </p>
                 </div>
