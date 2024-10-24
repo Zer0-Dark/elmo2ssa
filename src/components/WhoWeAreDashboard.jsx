@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { db } from '../firebase-config.js'
 import { toast } from "react-hot-toast";
 import SectionTitle from "./SectionTitle.jsx";
+import DashboardButton from "./DashboardButton.jsx";
 
 function WhoWeAreDashboard() {
 
@@ -36,11 +37,15 @@ function WhoWeAreDashboard() {
 
         getParaList();
     }, [])
+
+    function clickTheButton() {
+        updateWhoAreWeParagaph(para.id)
+    }
     return (
         <>
             <SectionTitle title={"فقرة من نحن"} ></SectionTitle>
             <textarea onChange={(e) => { setUpdatedPara(e.target.value) }} value={updatedPara} type="text" className=" desktop:w-2/3 w-[90%] p-6 desktop:min-h-48 min-h-56 mt-7  desktop:text-2xl text-xl " dir="rtl" lang="ar"></textarea>
-            <button onClick={() => { updateWhoAreWeParagaph(para.id) }} className="desktop:w-1/5 w-1/2  bg-secondryBg font-mainFont text-2xl p-4 mt-6 cursor-pointer hover:bg-white border-2 border-mainTheme rounded-lg">تغيير</button>
+            <DashboardButton text="تغيير" fun={clickTheButton} />
 
 
         </>

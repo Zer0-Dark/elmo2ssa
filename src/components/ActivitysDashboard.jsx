@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import ActivityDashboard from "../components/ActivityDashboard.jsx";
 import SectionTitle from './SectionTitle.jsx';
+import DashboardButton from './DashboardButton.jsx';
 
 function ActivitysDashboard() {
 
@@ -86,7 +87,8 @@ function ActivitysDashboard() {
                     <textarea value={newActivity.desc} onChange={(e) => { setNewActivity({ ...newActivity, desc: e.target.value }) }} lang="ar" dir="rtl" type="text" className="px-2 py-2 rounded-sm w-full" ></textarea>
                 </div>
 
-                <button onClick={addNewActivity} className="mt-4 bg-secondryBg text-2xl px-8 py-2 rounded-md border-2 border-mainTheme">اضافة نشاط جديد</button>
+
+                <DashboardButton fun={addNewActivity} text="اضافة نشاط جديد" />
             </div>
         </div>
     )

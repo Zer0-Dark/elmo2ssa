@@ -16,29 +16,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function DashBoard() {
 
-    // const [people, setPeople] = useState([]);
-
-
-
-    // const peopleCollectionRef = collection(db, "people");
-
-
-
-
-    // useEffect(() => {
-    //     const getPeopleList = async () => {
-    //         try {
-    //             const data = await getDocs(peopleCollectionRef);
-    //             const filterdData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-    //             setPeople(filterdData);
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     }
-
-    //     getPeopleList();
-    // }, [])
-
 
 
 

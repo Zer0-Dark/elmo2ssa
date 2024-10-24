@@ -57,7 +57,7 @@ function OuarActivities() {
 
         if (containerRef.current.scrollLeft > (containerRef.current.scrollWidth - windowWidthSize - gap)) {
             containerRef.current.scrollLeft = 0;
-            console.log("here")
+
         } else {
 
             containerRef.current.scrollLeft += (windowWidthSize - gap);
@@ -67,12 +67,20 @@ function OuarActivities() {
     function dec() {
         let gap = windowWidthSize > 880 ? 20 : 25
 
-        containerRef.current.scrollLeft -= (windowWidthSize - gap);
+
+        if (containerRef.current.scrollLeft === 0) {
+            containerRef.current.scrollLeft = containerRef.current.scrollWidth;
+
+        } else {
+
+            containerRef.current.scrollLeft -= (windowWidthSize - gap);
+        }
 
     }
     useEffect(() => {
         scrollMiddle();
     })
+
     function scrollMiddle() {
         let gap = windowWidthSize > 880 ? 20 : 25
 
