@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 // import template from "../assets/قالب.png"
-import { animate, AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 
 function Activity(props) {

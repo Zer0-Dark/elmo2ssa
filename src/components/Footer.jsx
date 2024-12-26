@@ -55,7 +55,7 @@ function Footer() {
             <div>
                 <div></div>
                 <div className="flex justify-between text-white  font-mainFont px-8 py-4  border-t-2 border-white desktop:text-base text-xs">
-                    <h1 dir="rtl" lang="ar">صنع بواسطه 00</h1>
+                    <h1 dir="rtl" lang="ar">صنع بواسطه <a target="_blank" className="hover:text-secondryColor" href="https://funny-pika-73cd4f.netlify.app/">عبد الرحمن ايهاب</a> </h1>
                     <h1 dir="rtl" lang="ar">موسسة خيرية مشهرة برقم 4147 سنة 2020 بالاسكندرية</h1>
                 </div>
             </div>
