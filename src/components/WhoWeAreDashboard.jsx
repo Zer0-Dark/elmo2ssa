@@ -44,7 +44,7 @@ function WhoWeAreDashboard() {
     return (
         <>
             <SectionTitle title={"فقرة من نحن"} ></SectionTitle>
-            <textarea onChange={(e) => { setUpdatedPara(e.target.value) }} value={updatedPara} type="text" className=" desktop:w-2/3 w-[90%] p-6 desktop:min-h-48 min-h-56 mt-7  desktop:text-2xl text-xl " dir="rtl" lang="ar"></textarea>
+            <textarea onChange={(e) => { setUpdatedPara(e.target.value) }} value={updatedPara} type="text" className=" desktop:w-2/3 w-[90%] p-6 desktop:min-h-80 min-h-80 mt-7  desktop:text-2xl text-xl font-secondryFont font-semibold " dir="rtl" lang="ar"></textarea>
             <DashboardButton text="تغيير" fun={clickTheButton} />
 
 

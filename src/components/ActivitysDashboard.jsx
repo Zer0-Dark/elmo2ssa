@@ -78,12 +78,12 @@ function ActivitysDashboard() {
 
             </div>
             <div className="w-full flex flex-col justify-center items-center mb-12">
-                <div className="bg-secondryBg p-4 space-y-2 flex flex-col justify-center items-center desktop:w-[45%] w-[80%] rounded-md ">
-                    <h3 className="text-2xl " dir="rtl" lang="ar">العنوان</h3>
+                <div className="bg-secondryBg p-4 space-y-2 flex flex-col justify-center text-xl desktop:text-3xl items-center desktop:w-[45%] w-[80%] rounded-md ">
+                    <h3 className=" " dir="rtl" lang="ar">العنوان</h3>
                     <input value={newActivity.title} onChange={(e) => { setNewActivity({ ...newActivity, title: e.target.value }) }} lang="ar" dir="rtl" type="text" className="px-2 py-2 w-full rounded-sm"></input>
-                    <h3 className="text-2xl" dir="rtl" lang="ar">لينك الصوره</h3>
+                    <h3 className="" dir="rtl" lang="ar">لينك الصوره</h3>
                     <input value={newActivity.photoUrl} onChange={(e) => { setNewActivity({ ...newActivity, photoUrl: e.target.value }) }} lang="ar" dir="rtl" type="text" className="px-2 py-2 rounded-sm w-full"></input>
-                    <h3 className="text-2xl" dir="rtl" lang="ar">الوصف</h3>
+                    <h3 className="" dir="rtl" lang="ar">الوصف</h3>
                     <textarea value={newActivity.desc} onChange={(e) => { setNewActivity({ ...newActivity, desc: e.target.value }) }} lang="ar" dir="rtl" type="text" className="px-2 py-2 rounded-sm w-full" ></textarea>
                 </div>
 

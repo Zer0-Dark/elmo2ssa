@@ -41,7 +41,7 @@ function Footer() {
                     <h2 dir="rtl" lang="ar" ><span className="font-bold text-secondryBg">العنوان : </span>{contactInfo[0]?.address}</h2>
                     <h2 dir="rtl" lang="ar"><span className="font-bold text-secondryBg">البريد الالكتروني : </span>{contactInfo[0]?.email}</h2>
                     <h2 dir="rtl" lang="ar"><span className="font-bold text-secondryBg">رقم الهاتف :  </span >{contactInfo[0]?.phone}</h2>
-                    <h2 dir="rtl" lang="ar"><span className="font-bold text-secondryBg"> رقم حساب التبرعات (بنك مصر) : </span>{contactInfo[0]?.bank}</h2>
+                    <h2 dir="rtl" lang="ar"><span className="font-bold text-secondryBg"> رقم حساب التبرعات (بنك القاهرة) : </span>{contactInfo[0]?.bank}</h2>
                 </div>
 
 

@@ -52,7 +52,8 @@ function OuarActivities() {
 
 
     function inc() {
-        let gap = windowWidthSize > 880 ? 20 : 25
+        let gap = windowWidthSize > 880 ? 20 : 25;
+
 
 
         if (containerRef.current.scrollLeft > (containerRef.current.scrollWidth - windowWidthSize - gap)) {
@@ -108,7 +109,7 @@ function OuarActivities() {
                     {
                         activity.length == 0 &&
                         <div className="w-full h-[80vh] bg-mainTheme flex justify-center items-center rounded-md">
-                            <h1 className="text-5xl text-white font-bold">لا توجد نشاطات حاليا</h1>
+                            <h1 className="desktop:text-5xl text-3xl  text-white font-bold">لا توجد نشاطات حاليا</h1>
                         </div>
                     }
 
@@ -138,6 +139,9 @@ function OuarActivities() {
                 </motion.div>
 
             </div>
+
+
+
         </div>
     )
 }

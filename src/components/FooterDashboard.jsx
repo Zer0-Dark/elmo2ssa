@@ -49,15 +49,15 @@ function FooterDashboard() {
     return (
         <div className="w-full flex flex-col justify-center items-center mb-12 ">
             <SectionTitle title="تواصل معنا"></SectionTitle>
-            <div className="bg-secondryBg desktop:p-8 p-4 rounded-md desktop:w-[45%] w-[90%] flex flex-col justify-end items-center space-y-4 mb-6 mt-10 ">
-                <h3 className="text-2xl ">العنوان</h3>
-                <textarea value={contactInfo.address} onChange={(e) => setContactInfo({ ...contactInfo, address: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 text-xl w-full"></textarea>
-                <h3 className="text-2xl ">البريد الالكتروني</h3>
-                <input value={contactInfo.email} onChange={(e) => setContactInfo({ ...contactInfo, email: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 text-xl w-full"></input>
-                <h3 className="text-2xl ">رقم الهاتف</h3>
-                <input value={contactInfo.phone} onChange={(e) => setContactInfo({ ...contactInfo, phone: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 text-xl w-full"></input>
-                <h3 className="text-2xl">رقم حساب التبرعات</h3>
-                <input value={contactInfo.bank} onChange={(e) => setContactInfo({ ...contactInfo, bank: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 text-xl w-full"></input>
+            <div className="bg-secondryBg desktop:text-3xl text-xl desktop:p-8 p-4 rounded-md desktop:w-[45%] w-[90%] flex flex-col justify-end items-center space-y-4 mb-6 mt-10 ">
+                <h3 className="">العنوان</h3>
+                <textarea value={contactInfo.address} onChange={(e) => setContactInfo({ ...contactInfo, address: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 desktop:text-2xl w-full"></textarea>
+                <h3 className=" ">البريد الالكتروني</h3>
+                <input value={contactInfo.email} onChange={(e) => setContactInfo({ ...contactInfo, email: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 desktop:text-2xl w-full"></input>
+                <h3 className="">رقم الهاتف</h3>
+                <input value={contactInfo.phone} onChange={(e) => setContactInfo({ ...contactInfo, phone: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 desktop:text-2xl w-full"></input>
+                <h3 className="">رقم حساب التبرعات</h3>
+                <input value={contactInfo.bank} onChange={(e) => setContactInfo({ ...contactInfo, bank: e.target.value })} lang="ar" dir="rtl" type="text" className="px-2 py-2 desktop:text-2xl w-full"></input>
             </div>
             <DashboardButton fun={clickTheButton} text="تغيير" />
         </div>
