@@ -109,7 +109,7 @@ function OuarActivities() {
                     {
                         activity.length == 0 &&
                         <div className="w-full h-[80vh] bg-mainTheme flex justify-center items-center rounded-md">
-                            <h1 className="desktop:text-5xl text-3xl  text-white font-bold">لا توجد نشاطات حاليا</h1>
+                            <h1 className="desktop:text-5xl text-3xl  text-white font-bold">النشاطات</h1>
                         </div>
                     }
 

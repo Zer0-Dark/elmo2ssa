@@ -12,7 +12,7 @@ function PersonCard(props) {
                 <h1 dir="rtl" lang="ar" className=" font-secondryFont text-secondryColor mb-2 font-bold text-sm desktop:text-base">{props.jobTitle}</h1>
                 <p dir="rtl" lang="ar" className={`desktop:text-base ${props.main ? "w-[300px]" : ""} text-xs desktop:font-normal font-semibold`}>{props.about}</p>
             </div>
-            <img src={man} alt="man" className="rounded-full desktop:max-h-[150px] desktop:max-w-fit max-w-[100px]  border-4 border-mainTheme desktop:order-1 order-first"></img>
+            <img src={props.img ? props.img : man} alt="man" className="rounded-full desktop:max-h-[150px] desktop:max-w-fit max-w-[100px]  border-4 border-mainTheme desktop:order-1 order-first"></img>
         </div>
     )
 }

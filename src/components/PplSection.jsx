@@ -1,5 +1,6 @@
 import PersonCard from "./PersonCard"
-
+import hesham from "../assets/hesham.jpg"
+import atea from "../assets/atea.jpg"
 
 function PplSection() {
     return (
@@ -8,9 +9,9 @@ function PplSection() {
             <div className="w-full flex justify-center">
                 <PersonCard name="جيلان على محمود" jobTitle="رئيسة المؤسسة" about="" main={true} />
             </div>
-            <PersonCard name="هشام الدين على حسن" jobTitle="نائب رئيس المؤسسة" about="صاحب و مدير شركة مقاولات عامة" />
-            <PersonCard name="عطية عبد السلام السيد" jobTitle="امين الصندوق" about="" />
+            <PersonCard name="هشام الدين على حسن" jobTitle="نائب رئيس المؤسسة" about="صاحب و مدير شركة مقاولات عامة" img={hesham} />
             <PersonCard name="سمير شعبان أحمد" jobTitle="الامين العام" about="مدير عام شركة مياه الشرب بالاسكندرية " />
+            <PersonCard name="عطية عبد السلام السيد" jobTitle="عضو" about="" img={atea} />
             <PersonCard name="دانية محمود سمير" jobTitle="عضوة" about="" />
 
         </div>
