@@ -24,7 +24,7 @@ function WhoAreWeSection() {
         }
 
         getParaList();
-    }, [])
+    },)
 
     return (
         <>
@@ -40,9 +40,9 @@ function WhoAreWeSection() {
             <div id="whoAreWe" className="py-14 flex justify-center flex-col items-center" >
                 <SectionTitle title="من نحن ؟" />
                 <div className="mt-6 desktop:max-w-[1200px] max-w-[80%] text-center desktop:text-xl text-xs font-sans">
-                    <p className="  font-semibold font-secondryFont" dir="rtl" lang="ar">
+                    <h1 className="  font-semibold font-secondryFont" dir="rtl" lang="ar">
                         {para[0]?.paragraph}
-                    </p>
+                    </h1>
                 </div>
                 <div className="h-0.5 w-[300px] mt-6 bg-secondryColor rounded-md"></div>
             </div>

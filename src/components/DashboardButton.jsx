@@ -1,5 +1,6 @@
 
 
+// eslint-disable-next-line react/prop-types
 function DashboardButton({ fun, text }) {
     return (
         <>

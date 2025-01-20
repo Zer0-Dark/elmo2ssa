@@ -24,7 +24,7 @@ function Footer() {
 
 
         getContactList();
-    }, []);
+    }, );
 
 
     return (
