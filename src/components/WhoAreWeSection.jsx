@@ -2,7 +2,8 @@ import SectionTitle from "./SectionTitle"
 import { db } from '../firebase-config.js'
 import { getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import Loading from "./Loading.jsx";
 
 function WhoAreWeSection() {
 
@@ -32,9 +33,7 @@ function WhoAreWeSection() {
 
                 {
                     loading &&
-                    <motion.div initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed top-0 bottom-0 z-30 w-full h-full bg-mainTheme text-white text-5xl flex justify-center items-center">
-                        <h1 className="font-mainFont" lang="ar" dir="rtl">يتم التحميل ......</h1>
-                    </motion.div>
+                    <Loading />
                 }
             </AnimatePresence>
             <div id="whoAreWe" className="py-14 flex justify-center flex-col items-center" >

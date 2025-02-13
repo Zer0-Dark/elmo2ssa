@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(50deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 1.5s ease-in-out;
+}
+.animate-rotate-reverse {
+  animation: rotate 1.5s ease-in-out reverse;
+}

@@ -37,7 +37,7 @@ function Footer() {
                 </div>
 
                 <div className="desktop:w-1/3 desktop:max-w-1/3 text-white font-secondryFont space-y-1 desktop:space-y-5 desktop:text-base ">
-                    <h1 dir="rtl" lang="ar" className="font-mainFont text-xl text-center desktop:text-right  desktop:text-2xl ">عناوين التواصل</h1>
+                    <h2 dir="rtl" lang="ar" className="font-mainFont text-xl text-center desktop:text-right  desktop:text-2xl ">عناوين التواصل</h2>
                     <h2 dir="rtl" lang="ar" ><span className="font-bold text-secondryBg">العنوان : </span>{contactInfo[0]?.address}</h2>
                     <h2 dir="rtl" lang="ar"><span className="font-bold text-secondryBg">البريد الالكتروني : </span>{contactInfo[0]?.email}</h2>
                     <h2 dir="rtl" lang="ar"><span className="font-bold text-secondryBg">رقم الهاتف :  </span >{contactInfo[0]?.phone}</h2>
