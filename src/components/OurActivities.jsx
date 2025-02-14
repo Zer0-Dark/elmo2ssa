@@ -1,9 +1,9 @@
-import SectionTitle from "./SectionTitle"
+import SectionTitle from "./SectionTitle.jsx"
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Activity from "./Activity";
+import Activity from "./Activity.jsx";
 import { db } from '../firebase-config.js'
 import { getDocs, collection } from "firebase/firestore";
 

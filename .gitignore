@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# remove the firebase cinfig keys
+src/firebase-config.js

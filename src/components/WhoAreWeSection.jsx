@@ -7,7 +7,7 @@ import Loading from "./Loading.jsx";
 
 function WhoAreWeSection() {
 
-    const [para, setInfo] = useState([]);
+    const [info, setInfo] = useState([]);
     const [loading, setLoading] = useState(true);
     const paraCollectionRef = collection(db, "whoWeAreParagraph");
 
@@ -40,7 +40,7 @@ function WhoAreWeSection() {
                 <SectionTitle title="من نحن ؟" />
                 <div className="mt-6 desktop:max-w-[1200px] max-w-[80%] text-center desktop:text-xl text-xs font-sans">
                     <h1 className="  font-semibold font-secondryFont" dir="rtl" lang="ar">
-                        {para[0]?.paragraph}
+                        {info[0]?.paragraph}
                     </h1>
                 </div>
                 <div className="h-0.5 w-[300px] mt-6 bg-secondryColor rounded-md"></div>

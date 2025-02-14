@@ -22,12 +22,9 @@ function App() {
           <Route path="/login" element={<LogIn onLogin={onLogin} login={login} />}></Route>
 
           <Route path="/dashboard" element={
-
             <ProtectedRoute login={login}>
               <DashBoard logout={logout} login={login} />
-
             </ProtectedRoute>
-
           }></Route>
 
         </Route>
