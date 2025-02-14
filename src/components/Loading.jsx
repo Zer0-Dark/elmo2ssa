@@ -5,7 +5,7 @@ function Loading() {
 
 
     return (
-        <motion.div initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed  top-0 bottom-0 z-30 w-full h-full bg-mainTheme text-white text-5xl flex justify-center items-center">
+        <motion.div initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0.5 }} transition={{ duration: 0 }} className="fixed  top-0 bottom-0 z-30 w-full h-full bg-mainTheme text-white text-5xl flex justify-center items-center">
             <div className="flex align-middle justify-center flex-col font-secondryFont font-semibold text-center gap-5">
 
                 <svg className="fixed origin-top w-32 desktop:left-32 left-10 top-0 animate-rotate " fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396.586 396.586"

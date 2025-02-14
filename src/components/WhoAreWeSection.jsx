@@ -17,7 +17,9 @@ function WhoAreWeSection() {
                 const data = await getDocs(paraCollectionRef);
                 const filterdData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
                 setInfo(filterdData);
-                setLoading(false);
+                setTimeout(() => {
+                    setLoading(false); // Set loading to false after 500ms
+                }, 1500);
 
             } catch (error) {
                 console.log(error);

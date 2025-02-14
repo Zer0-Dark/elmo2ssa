@@ -12,8 +12,8 @@
 }
 
 .animate-rotate {
-  animation: rotate 1.5s ease-in-out;
+  animation: rotate 2s ease-in-out;
 }
 .animate-rotate-reverse {
-  animation: rotate 1.5s ease-in-out reverse;
+  animation: rotate 2s ease-in-out reverse;
 }
