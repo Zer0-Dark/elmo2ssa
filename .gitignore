@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # remove the firebase cinfig keys
-src/firebase-config.js
+.env
