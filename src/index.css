@@ -6,14 +6,17 @@
   0% {
     transform: rotate(-50deg);
   }
-  100% {
+  50% {
     transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(-50deg);
   }
 }
 
 .animate-rotate {
-  animation: rotate 2s ease-in-out;
+  animation: rotate 2s ease-in-out infinite;
 }
 .animate-rotate-reverse {
-  animation: rotate 2s ease-in-out reverse;
+  animation: rotate 2s ease-in-out reverse infinite;
 }
