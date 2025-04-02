@@ -36,7 +36,7 @@ function WhoWeAreDashboard() {
 
 
         getParaList();
-    }, [])
+    })
 
     function clickTheButton() {
         updateWhoAreWeParagaph(para.id)

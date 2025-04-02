@@ -19,7 +19,7 @@ function WhoAreWeSection() {
                 setInfo(filterdData);
                 setTimeout(() => {
                     setLoading(false); // Set loading to false after 500ms
-                }, 1500);
+                }, 100);
 
             } catch (error) {
                 console.log(error);

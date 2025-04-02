@@ -78,16 +78,18 @@ function OuarActivities() {
         }
 
     }
+
     useEffect(() => {
+        function scrollMiddle() {
+            console.log("called")
+            let gap = windowWidthSize > 880 ? 20 : 25
+
+            containerRef.current.scrollLeft += ((windowWidthSize * 2) - (gap * 2));
+        }
+
         scrollMiddle();
-    })
+    }, [windowWidthSize])
 
-    function scrollMiddle() {
-        let gap = windowWidthSize > 880 ? 20 : 25
-
-        containerRef.current.scrollLeft += ((windowWidthSize * 2) - (gap * 2));
-
-    }
 
 
 
